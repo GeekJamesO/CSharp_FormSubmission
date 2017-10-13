@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace FormSubmission.Models
 {
-	class Person
+	public class Person
 	{
 		[Required]
 		[MinLength(4)]

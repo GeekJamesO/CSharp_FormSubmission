@@ -20,15 +20,8 @@ namespace FormSubmission.Controllers
 
         [HttpPost]
         [Route("process")]
-        public IActionResult process(string FirstName, string LastName, int Age,  string Email, string Password)
+        public IActionResult process(Person p)
         {
-            Person p = new Person();
-            p.FirstName = FirstName;
-            p.LastName = LastName;
-            p.Age = Age;
-            p.Email = Email;
-            p.Password = Password;
-
             TryValidateModel(p);
             if (ModelState.ErrorCount > 0) 
             {
